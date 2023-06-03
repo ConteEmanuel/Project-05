@@ -24,12 +24,10 @@ body{
 #middleScene{
     margin-bottom:-4vw;
     box-sizing: border-box;
-    z-index: 555;
 }
 #bottomScene>svg{
     box-sizing: border-box;
     display: flex;
-    z-index: 444;
 }
 #topScene{
     position: absolute;
