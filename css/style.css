@@ -7,21 +7,16 @@
 }
 #topScene, #middleScene, #bottomScene{
     width: 100%;
+    height: 33%;
     box-sizing: border-box;
 }
-#topScene{
-    background-color: blueviolet
-}
 #middleScene{
-    margin-bottom: -90px;
-    z-index: 9999;
-
-}
-#bottomScene{
-    background-color: aqua;
+    z-index: 555;
 }
 #bottomScene>svg{
     display: flex;
     margin-left: -10px;
     margin-right: -10px;
+    z-index: 444;
+    margin-top: -90px;
 }
