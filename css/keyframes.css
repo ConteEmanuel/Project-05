@@ -1,6 +1,6 @@
 #grass2Move>path{
     transform-box: fill-box;
-    animation-name:bottomScene;
+    animation-name:grass;
     animation-timing-function: ease;
     animation-duration: 5s;
     transform-origin: bottom center;
@@ -8,7 +8,7 @@
     animation-fill-mode: forwards;
 }
 
-@keyframes bottomScene {
+@keyframes grass {
     0%{transform: rotate(3deg)}
     25%{transform: rotate(-3deg)}
     50%{transform: rotate(3deg)}
