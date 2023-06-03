@@ -3,14 +3,19 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    background-color: red;
+    background-color: aqua;
 }
-#topScene, #centerScene, #bottomScene{
+#topScene, #middleScene, #bottomScene{
     width: 100%;
     box-sizing: border-box;
 }
 #topScene{
     background-color: blueviolet
+}
+#middleScene{
+    margin-bottom: -90px;
+    z-index: 9999;
+
 }
 #bottomScene{
     background-color: aqua;
