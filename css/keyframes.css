@@ -14,3 +14,17 @@
     50%{transform: rotate(2deg)}
     75%{transform: rotate(-2deg)}
 }
+
+#eggTopPart{
+    transform-box: fill-box;
+    animation-name:egg;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    transform-origin: bottom right;
+    animation-fill-mode: forwards;
+}
+
+@keyframes egg{
+    0% {}
+    100% {transform: rotate(150deg);}
+}
