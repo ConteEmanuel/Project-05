@@ -287,8 +287,8 @@
                     </g>
                 </svg></section>
         </div>
-        <div id="formContainer">
-            <form action="">
+        <form action="">
+            <div id="formContainer">
                 <div id="leftSideForm">
                     <label for="firstName">FirstName</label>
                     <input type="text" name="firstName" id="firstName">
@@ -301,10 +301,15 @@
                     <input type="text" name="lastName" id="lastName">
                     <label for="phoneNumber">phoneNumber</label>
                     <input type="number" name="phoneNumber" id="phoneNumber">
-        </div>
-    </div>
-    </form>
-    </div>
+                    <label for="confirmPassword">Password</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword">
+                </div>
+            </div>
+            <div id="submitSection">
+                <label for="submit"><input type="submit" name="submit" id="submit" value="Create an Account"></label>
+                <p>Already have an account?Log in</p>
+            </div>
+        </form>
     </div>
 </body>
 
