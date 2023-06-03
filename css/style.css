@@ -2,6 +2,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 3ch;
 }
 #superContainer{
     display: flex;
@@ -23,22 +24,31 @@ body{
 #middleScene{
     margin-bottom:-4vw;
     box-sizing: border-box;
+    z-index: 555;
 }
 #bottomScene>svg{
     box-sizing: border-box;
     display: flex;
     z-index: 444;
 }
-
 #topScene{
     position: absolute;
     top: 0;
     right: 0;
     width: 100%;
 }
-
-#dialog{
-    text-align: center;
-    
-
+form{
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+form > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
 }
