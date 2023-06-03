@@ -1,0 +1,16 @@
+#grass2Move>path{
+    transform-box: fill-box;
+    animation-name:bottomScene;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    transform-origin: bottom center;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bottomScene {
+    0%{transform: rotate(2deg)}
+    25%{transform: rotate(-2deg)}
+    50%{transform: rotate(2deg)}
+    75%{transform: rotate(-2deg)}
+}
