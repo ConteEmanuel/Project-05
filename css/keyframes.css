@@ -32,7 +32,7 @@
     100% {transform: rotate(150deg);}
 }
 
-#birdHead>path , #birdBody {
+#birdHead , #birdBody {
     transform-box: fill-box;
     animation-name:birdFrame;
     animation-timing-function: linear;
@@ -64,7 +64,7 @@
     animation-duration: 7s;
     transform-origin: bottom center;
     animation-iteration-count: infinite;
-    animation-fill-mode: both, forwards, both;
+    animation-fill-mode: backwards;
 }
 
 @keyframes sunnOrangePart {
@@ -85,4 +85,43 @@
     70%{transform: rotate(1deg) scale(0.99)}
     85%{transform: rotate(-1deg) scale(0.98)}
     100%{transform: rotate(1deg) scale(0.99)}
+}
+
+#birdBeakTop{
+    transform-box: fill-box;
+    animation-name:beakTop;
+    animation-timing-function: ease;
+    animation-delay: 4.5s;
+    animation-duration: 12s;
+    transform-origin: bottom right;
+    animation-fill-mode: both, forwards, both;
+}
+#birdBeakBottom{
+    transform-box: fill-box;
+    animation-name:beakBottom;
+    animation-timing-function: ease;
+    animation-delay: 4.5s;
+    animation-duration: 3s;
+    transform-origin: top right;
+    animation-fill-mode: both, forwards, both;
+}
+
+
+@keyframes beakTop {
+    0%{transform: rotate(0deg)}
+    15%{transform: rotate(10deg)}
+    25%{transform: rotate(0deg)}
+    55%{transform: rotate(10deg)}
+    70%{transform: rotate(0deg)}
+    85%{transform: rotate(10deg)}
+    100%{transform: rotate(0deg)}
+}
+@keyframes beakBottom {
+    0%{transform: rotate(0deg)}
+    15%{transform: rotate(-10deg)}
+    25%{transform: rotate(0deg)}
+    55%{transform: rotate(-10deg)}
+    70%{transform: rotate(0deg)}
+    85%{transform: rotate(-10deg)}
+    100%{transform: rotate(0deg)}
 }
