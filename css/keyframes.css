@@ -22,33 +22,51 @@
     transform-box: fill-box;
     animation-name:egg;
     animation-timing-function: linear;
-    animation-duration: 4s;
+    animation-duration: 5.1s;
+    animation-delay: 1.5s;
     transform-origin: bottom right;
     animation-fill-mode: forwards;
 }
 
 @keyframes egg{
-    0% {}
+    0% {transform: translateX(1px) translateY(1px);}
+    19% {transform: translateX(-1px);}
+    38% {transform: translateX(1px) translateY(1px);}
+    58% {transform: translateX(-1px);}
+    76% {transform: translateX(0px) translateY(1px);}
+    84% {transform: translateX(1px)translateY(1px);}
     100% {transform: rotate(150deg);}
 }
 
-#birdHead , #birdBody {
+#birdHead , #birdBody{
     transform-box: fill-box;
-    animation-name:birdFrame;
-    animation-timing-function: linear;
-    animation-duration: 3s;
-    animation-delay: 1.5s;
+    animation-name:birdHead;
+    animation-timing-function:ease-in-out;
+    animation-duration: 4s;
+    animation-delay: 6.2s;
     transform-origin: center;
     animation-fill-mode: forwards;
+    opacity: 0;
 }
-
-@keyframes birdFrame{
+@keyframes birdHead{
     0% {}
-    40% {transform: translateY(-5px)}
-    100% {transform: translateY(-8px)}
+    40% {opacity: 0.7; transform: translateY(-5px)}
+    80%{opacity:0.9;}
+    100% {opacity: 1; transform: translateY(-8px)}
 }
 
-#sunnOrange{
+#birdBody{
+    animation-name:birdBody;
+}
+
+@keyframes birdBody{
+    0% {}
+    40%{opacity: 0.5;transform: translateY(-5px)}
+    80% {opacity: 0.95;}
+    100% {opacity: 1;transform: translateY(-8px)}
+}
+
+#sunnOrange, #sunnYellow{
     transform-box: fill-box;
     animation-name:sunnOrangePart;
     animation-timing-function: ease;
@@ -58,15 +76,9 @@
     animation-fill-mode: both, forwards, both;
 }
 #sunnYellow{
-    transform-box: fill-box;
-    animation-name:sunn;
-    animation-timing-function: ease;
-    animation-duration: 7s;
-    transform-origin: bottom center;
-    animation-iteration-count: infinite;
+    animation-name:sunnYellowPart;
     animation-fill-mode: backwards;
 }
-
 @keyframes sunnOrangePart {
     0%{transform: rotate(1deg)}
     15%{transform: rotate(-1deg)}
@@ -76,8 +88,7 @@
     85%{transform: rotate(-1deg)}
     100%{transform: rotate(1deg)}
 }
-
-@keyframes sunn{
+@keyframes sunnYellowPart{
     0%{transform: rotate(1deg) scale(0.99)}
     15%{transform: rotate(-1deg) scale(0.98)}
     25%{transform: rotate(1deg) scale(0.99)}
@@ -87,41 +98,61 @@
     100%{transform: rotate(1deg) scale(0.99)}
 }
 
-#birdBeakTop{
+#birdBeakTop, #birdBeakBottom{
     transform-box: fill-box;
     animation-name:beakTop;
-    animation-timing-function: ease;
-    animation-delay: 4.5s;
-    animation-duration: 12s;
+    animation-timing-function: linear;
+    animation-delay: 6s;
+    animation-duration: 10s;
     transform-origin: bottom right;
     animation-fill-mode: both, forwards, both;
 }
 #birdBeakBottom{
-    transform-box: fill-box;
     animation-name:beakBottom;
-    animation-timing-function: ease;
-    animation-delay: 4.5s;
-    animation-duration: 3s;
+    animation-duration: 10s;
+    animation-delay: 7s;
     transform-origin: top right;
-    animation-fill-mode: both, forwards, both;
 }
-
 
 @keyframes beakTop {
     0%{transform: rotate(0deg)}
-    15%{transform: rotate(10deg)}
-    25%{transform: rotate(0deg)}
-    55%{transform: rotate(10deg)}
-    70%{transform: rotate(0deg)}
-    85%{transform: rotate(10deg)}
-    100%{transform: rotate(0deg)}
+    5%{transform: rotate(12deg)}
+    10%{transform: rotate(0deg)}
+    15%{transform: rotate(12deg)}
+    20%{transform: rotate(0deg)}
+    25%{transform: rotate(12deg)}
+    30%{transform: rotate(0deg)}
+    35%{transform: rotate(12deg)}
+    40%{transform: rotate(0deg)}
+    45%{transform: rotate(12deg)}
+    55%{transform: rotate(0deg)}
+    60%{transform: rotate(12deg)}
+    65%{transform: rotate(0deg)}
+    70%{transform: rotate(12deg)}
+
 }
+
 @keyframes beakBottom {
     0%{transform: rotate(0deg)}
-    15%{transform: rotate(-10deg)}
+    5%{transform: rotate(-12deg)}
+    10%{transform: rotate(0deg)}
+    15%{transform: rotate(-12deg)}
+    20%{transform: rotate(0deg)}
+    25%{transform: rotate(-12deg)}
+    30%{transform: rotate(0deg)}
+    35%{transform: rotate(-12deg)}
+    40%{transform: rotate(0deg)}
+    45%{transform: rotate(-12deg)}
+    55%{transform: rotate(0deg)}
+    60%{transform: rotate(-12deg)}
+    65%{transform: rotate(0deg)}
+    70%{transform: rotate(-12deg)}
+
+/*    0%{transform: rotate(0deg)}
+    15%{transform: rotate(-12deg)}
     25%{transform: rotate(0deg)}
-    55%{transform: rotate(-10deg)}
+    55%{transform: rotate(-12deg)}
     70%{transform: rotate(0deg)}
-    85%{transform: rotate(-10deg)}
-    100%{transform: rotate(0deg)}
+    85%{transform: rotate(-12deg)}
+    100%{transform: rotate(0deg)}*/
 }
