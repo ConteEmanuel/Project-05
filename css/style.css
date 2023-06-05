@@ -3,12 +3,20 @@ body{
     height:100vh;
     width: 100vw;
     display: flex;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 2vh;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 #sceneContainer{
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 54vw;
+    min-width: 40ch;
+    border: 2px solid aqua;
 }
 #middleScene{
     margin-bottom:-5vh;
@@ -18,22 +26,48 @@ body{
     background-color: aqua;
 }
 form{
-    min-width: 60ch;
+    box-sizing: border-box;
     display: flex;
+    width: calc(100vw - 54vw);
     flex-direction: column;
     justify-content: center;
+    background-color: gray;
+    border: 2px solid black;
+    min-width: 40ch;
 }
 #formContainer{
     display: flex;
-    padding-bottom: 4ch;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4ch;
+    margin-left: 4ch;
+    padding-bottom: 3ch;
 }
-#formContainer >div{
+#formContainer >div > * {
+    margin: 1ch 0ch
+}
+#formContainer > div{
     display: flex;
     flex-direction: column;
-    padding-left:10ch;
+    justify-content: center;
+    align-items: flex-start
 }
-
-#submitSection > label, p{
-    padding-top: 4ch;
-    padding-left: 10ch;
+#formContainer>div >*{
+    max-width:20ch;
+}
+#formContainer>div>input{
+    padding: 1ch 0;
+}
+#submitSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 4ch;
+}
+#submitSection > input{
+    padding: 3ch 2ch;
+    width: 21ch;
+    margin-bottom: 2ch;
 }
