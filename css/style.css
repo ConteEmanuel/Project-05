@@ -71,3 +71,9 @@ form{
     width: 21ch;
     margin-bottom: 2ch;
 }
+#fenix{
+    position: relative;
+    top: 25%;
+    left:calc(100% - 32px);
+    width: 64px;
+}
