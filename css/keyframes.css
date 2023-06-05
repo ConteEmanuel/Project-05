@@ -185,23 +185,24 @@
 
 #rock{
     animation-name: rockAnimation;
-    z-index: 9999;
+    z-index: 444;
+    opacity: 0.7;
 }
 
 @keyframes rockAnimation {
     0% {}
 
     10% {
-        opacity: 0.3;
+        opacity: 0.7;
     }
 
     20% {
-        opacity: 0.9;
+        opacity: 0.7;
     }
 
     40% {
         transform: translateY(-1px);
-        opacity: 0.9;
+        opacity: 0.7;
     }
 
     60% {
