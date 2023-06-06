@@ -1,11 +1,11 @@
 body{
-    font-size:16px;
     height:100vh;
     width: 100vw;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    font-size: 2vh;
     display: flex;
     justify-content: center;
     align-items: stretch;
-    font-size: 2vh;
     flex-wrap: wrap;
     flex-grow: 1;
     color: white;
@@ -46,7 +46,7 @@ form{
     padding-bottom: 3ch;
 }
 #formContainer >div > * {
-    margin: 1ch 0ch
+    margin: 1ch 0ch;
 }
 #formContainer > div{
     display: flex;
@@ -60,6 +60,9 @@ form{
 #formContainer>div>input{
     padding: 1ch 0;
 }
+#formContainer>div>label{
+    margin-left: 1ch;
+}
 #submitSection{
     display: flex;
     flex-direction: column;
@@ -67,11 +70,7 @@ form{
     align-items: flex-start;
     margin-left: 4ch;
 }
-#submitSection > input{
-    padding: 3ch 2ch;
-    width: 21ch;
-    margin-bottom: 2ch;
-}
+
 #fenix{/*Black Icon*/
     position: relative;
     top: 25%;
@@ -80,5 +79,43 @@ form{
 }
 h1{
     font-size: 2vw;
-    line-height: 4vh;
+    line-height: 7vh;
+}
+h1 > span{
+    font-weight: bold;
+    font-size: 4vh;
+}
+/*inputs styling*/
+input{
+    border: 0.45ch solid  rgb(206, 219, 19);
+    border-radius: 2ch;
+    outline: none;
+    color: rgb(124, 118, 118);
+}
+input:invalid{
+    border-color: rgb(219, 92, 19);
+}
+input:valid{
+    border-color:  rgb(19, 219, 19);
+    outline: 0.3ch solid rgb(219, 166, 19);
+}
+input:focus{
+    border-color: rgb(219, 166, 19);
+    outline: thick double rgb(219, 139, 19);
+    color:rgb(219, 139, 19);
+}
+input::placeholder{
+    color: rgb(124, 118, 118);
+    background-color: rgb(219, 139, 19);
+}
+input:placeholder-shown{
+    background-color:rgb(219, 166, 19);
+}
+input[type=submit]{
+    font-size: 2vh;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    padding: 1ch 2ch;
+    width: 21ch;
+    margin-bottom: 2ch;
+
 }
