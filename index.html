@@ -9,6 +9,9 @@
    <link rel="stylesheet" href="css/reset.css">
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/keyframes.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
    <script defer src="script/script.js"></script>
    <title>Interactive Form</title>
 </head>
@@ -610,27 +613,27 @@
       </section>
    </div>
    <form action=""><!--Right Side-->
-      <div id="formContainer">
+      <div id="formContainer"><!---->
          <div>
             <label for="firstName">FirstName</label>
-            <input type="text" name="firstName" id="firstName">
+            <input type="text" name="firstName" id="firstName" autocomplete="name" pattern="[^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="       MyName" required>
             <label for="email">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required autocomplete="email" pattern="^[a-zA-Z0–9+_.-]+@[a-zA-Z0–9.-]+$" placeholder="     sample@mail.com">
             <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password" autocomplete="current-password" placeholder="   Insert Password Here"  required>
          </div>
          <div><label for="lastName">LastName</label>
-            <input type="text" name="lastName" id="lastName">
+            <input type="text" name="lastName" id="lastName" autocomplete="family-name" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="      MyLastName"  required>
             <label for="phoneNumber">PhoneNumber</label>
-            <input type="number" name="phoneNumber" id="phoneNumber">
+            <input type="number" name="phoneNumber" id="phoneNumber" autocomplete="tel" pattern="^\+?[1-9]\d{1,14}$" placeholder="      0 54 +2588 4444" required>
             <label for="confirmPassword">Password</label>
-            <input type="password" name="confirmPassword" id="confirmPassword">
+            <input type="password" name="confirmPassword" id="confirmPassword" placeholder="  Repeat Your Password" required >
          </div>
       </div>
       <div id="submitSection">
          <label for="submit"></label>
-         <input type="submit" name="submit" id="submit" value="Create an Account">
-         <h1>Do You Want to see how this Bird grow and fly</br> Then, Log in Now!</h1>
+         <input type="submit" name="submit" id="submit" value="Create an Account" required>
+         <h1>Do You Want to see how this Bird grow and fly?</br> Then,  <span>Log in Now!</span></h1>
       </div>
    </form>
 </body>
