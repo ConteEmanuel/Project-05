@@ -8,6 +8,7 @@ body{
     font-size: 2vh;
     flex-wrap: wrap;
     flex-grow: 1;
+    color: white;
 }
 #sceneContainer{
     box-sizing: border-box;
@@ -16,14 +17,14 @@ body{
     justify-content: center;
     width: 54vw;
     min-width: 40ch;
-    border: 2px solid aqua;
+    border: 2px solid rgba(42, 173, 206, 0.753);
 }
 #middleScene{
     margin-bottom:-5vh;
-    background-color: aqua;
+    background-color: rgba(42, 173, 206, 0.753);
 }
 #topScene{
-    background-color: aqua;
+    background-color: rgba(42, 173, 206, 0.753);
 }
 form{
     box-sizing: border-box;
@@ -31,11 +32,11 @@ form{
     width: calc(100vw - 54vw);
     flex-direction: column;
     justify-content: center;
-    background-color: gray;
-    border: 2px solid black;
+    background-color: rgb(206, 135, 42);
+    border: 2px solid rgb(0, 0, 0);
     min-width: 40ch;
 }
-#formContainer{
+#formContainer{ /*Fields part */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -71,9 +72,13 @@ form{
     width: 21ch;
     margin-bottom: 2ch;
 }
-#fenix{
+#fenix{/*Black Icon*/
     position: relative;
     top: 25%;
     left:calc(100% - 32px);
     width: 64px;
+}
+h1{
+    font-size: 2vw;
+    line-height: 4vh;
 }
