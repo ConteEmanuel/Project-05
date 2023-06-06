@@ -114,9 +114,9 @@ input:placeholder-shown{
         font-size: 2vh;
 }
 input[type=submit]{
-    font-size: 2vh;
+    font-size: 3vh;
     font-family: 'Roboto Mono', monospace, sans-serif;
-    padding: 1ch 2ch;
+    padding: 2ch 2ch;
     width: 21ch;
     margin-bottom: 2ch;
     background-color: rgb(230, 192, 136);
