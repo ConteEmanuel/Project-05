@@ -1,44 +1,82 @@
-#grass2Move>path {
+/*Top Part Animation*/
+#sunnOrange,
+#sunnYellow {
     transform-box: fill-box;
-    animation-name: grass;
+    animation-name: sunnOrangePart;
     animation-timing-function: ease;
-    animation-duration: 7s;
+    animation-duration: 9s;
     transform-origin: bottom center;
     animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both, forwards, both;
 }
 
-@keyframes grass {
+@keyframes sunnOrangePart {
     0% {
-        transform: rotate(3deg);
+        transform: rotate(1deg);
     }
 
     15% {
-        transform: rotate(-3deg);
+        transform: rotate(-1deg);
     }
 
     25% {
-        transform: rotate(3deg);
+        transform: rotate(1deg);
     }
 
     55% {
-        transform: rotate(-3deg);
+        transform: rotate(-1deg);
     }
 
     70% {
-        transform: rotate(3deg);
+        transform: rotate(1deg);
     }
 
     85% {
-        transform: rotate(-3deg);
+        transform: rotate(-1deg);
     }
 
     100% {
-        transform: rotate(3deg);
+        transform: rotate(1deg);
     }
 }
 
-#eggTopPart, #eggBottomPart {
+#sunnYellow {
+    animation-name: sunnYellowPart;
+    animation-fill-mode: backwards;
+}
+
+@keyframes sunnYellowPart {
+    0% {
+        transform: rotate(1deg) scale(0.99);
+    }
+
+    15% {
+        transform: rotate(-1deg) scale(0.98);
+    }
+
+    25% {
+        transform: rotate(1deg) scale(0.99);
+    }
+
+    55% {
+        transform: rotate(-1deg) scale(0.98);
+    }
+
+    70% {
+        transform: rotate(1deg) scale(0.99);
+    }
+
+    85% {
+        transform: rotate(-1deg) scale(0.98);
+    }
+
+    100% {
+        transform: rotate(1deg) scale(0.99);
+    }
+}
+/*Middle Part Animation*/
+#eggTopPart,
+#eggBottomPart {
     transform-box: fill-box;
     animation-name: eggTopPart;
     animation-timing-function: linear;
@@ -68,47 +106,121 @@
     15% {
         transform: translateX(1px) translateY(1px)
     }
-        20% {
-        transform: translateX(1px) translateY(1px);;
+
+    20% {
+        transform: translateX(1px) translateY(1px);
+        ;
     }
+
     25% {
         transform: translateX(-1px);
     }
+
     30% {
-        transform: translateX(-1px) translateY(1px);;
+        transform: translateX(-1px) translateY(1px);
+        ;
     }
+
     35% {
         opacity: 0.9;
     }
-    70%{
+
+    70% {
         opacity: 0.8;
     }
-    99%{
+
+    99% {
         opacity: 0.9;
     }
-    100%{transform: rotate(150deg); opacity: 0;}
+
+    100% {
+        transform: rotate(150deg);
+        opacity: 0;
+    }
 }
 
-    #eggBottomPart {
-        animation-name: eggBottomAnimation;
+#eggBottomPart {
+    animation-name: eggBottomAnimation;
 }
-@keyframes eggBottomAnimation{
-    0%{}
+
+@keyframes eggBottomAnimation {
+    0% {}
+
     35% {
         opacity: 0.9;
     }
-    70%{
+
+    70% {
         opacity: 0.8;
     }
-    99%{
+
+    99% {
         opacity: 0.9;
     }
-    100%{opacity: 0;}
+
+    100% {
+        opacity: 0;
+    }
 }
 
+#breakLine {
+    transform-box: fill-box;
+    animation-name: breakLineAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 8.1s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    z-index: 777;
+}
+
+@keyframes breakLineAnimation {
+    0% {opacity: 0.8;
+        transform: translateX(1px) translateY(1px);
+        scale: 1.1;
+    }
+
+    2% {opacity: 0.8;
+        transform: translateX(-1px);
+        scale: 1.05;
+    }
+
+    5% {opacity: 1;
+        transform: translateX(1px) translateY(1px);
+    }
+
+    10% {opacity: 0.8;
+        transform: translateX(-1px);
+        scale: 0.95;
+    }
+
+    15% {opacity: 0.1;
+        transform: translateX(1px) translateY(1px)
+    }
+
+    20% {opacity: 0.8;
+        transform: translateX(1px) translateY(1px);
+        scale: 0.95;
+    }
+
+    25% {opacity: 0.8;
+        transform: translateX(-1px);
+    }
+
+    30% {opacity: 0.4;
+        transform: translateX(-1px) translateY(1px);
+        scale: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
 
 #birdHead,
-#birdBody,#rock {
+#birdBody,
+#rock {
     transform-box: fill-box;
     animation-name: birdHead;
     animation-timing-function: ease-in-out;
@@ -147,7 +259,10 @@
     }
 }
 
-#birdBody, #birdTail, #birdLegs, #birdTail {
+#birdBody,
+#birdTail,
+#birdLegs,
+#birdTail {
     animation-name: birdBody;
     z-index: 555;
 }
@@ -182,129 +297,17 @@
         transform: translateY(-8px);
     }
 }
-
-#rock{
-    animation-name: rockAnimation;
-    z-index: 444;
-    opacity: 0.7;
-}
-
-@keyframes rockAnimation {
-    0% {}
-
-    10% {
-        opacity: 0.7;
-    }
-
-    20% {
-        opacity: 0.7;
-    }
-
-    40% {
-        transform: translateY(-1px);
-        opacity: 0.7;
-    }
-
-    60% {
-        opacity: 0.7;
-    }
-
-    80% {
-        opacity: 0.8;
-    }
-
-    100% {
-        transform: translateY(-1px);
-        opacity: 1;
-    }
-}
-
-
-#sunnOrange,
-#sunnYellow {
-    transform-box: fill-box;
-    animation-name: sunnOrangePart;
-    animation-timing-function: ease;
-    animation-duration: 9s;
-    transform-origin: bottom center;
-    animation-iteration-count: infinite;
-    animation-fill-mode: both, forwards, both;
-}
-
-#sunnYellow {
-    animation-name: sunnYellowPart;
-    animation-fill-mode: backwards;
-}
-
-@keyframes sunnOrangePart {
-    0% {
-        transform: rotate(1deg);
-    }
-
-    15% {
-        transform: rotate(-1deg);
-    }
-
-    25% {
-        transform: rotate(1deg);
-    }
-
-    55% {
-        transform: rotate(-1deg);
-    }
-
-    70% {
-        transform: rotate(1deg);
-    }
-
-    85% {
-        transform: rotate(-1deg);
-    }
-
-    100% {
-        transform: rotate(1deg);
-    }
-}
-
-@keyframes sunnYellowPart {
-    0% {
-        transform: rotate(1deg) scale(0.99);
-    }
-
-    15% {
-        transform: rotate(-1deg) scale(0.98);
-    }
-
-    25% {
-        transform: rotate(1deg) scale(0.99);
-    }
-
-    55% {
-        transform: rotate(-1deg) scale(0.98);
-    }
-
-    70% {
-        transform: rotate(1deg) scale(0.99);
-    }
-
-    85% {
-        transform: rotate(-1deg) scale(0.98);
-    }
-
-    100% {
-        transform: rotate(1deg) scale(0.99);
-    }
-}
-
 #birdBeakTop,
 #birdBeakBottom {
     transform-box: fill-box;
     animation-name: beakTop;
     animation-timing-function: linear;
     animation-delay: 6s;
-    animation-duration: 10s;
+    animation-duration: 10s, 45s;
     transform-origin: bottom right;
     animation-fill-mode: both, forwards, both;
+    animation-iteration-count: infinite;
+
 }
 
 #birdBeakBottom {
@@ -465,6 +468,7 @@
     animation-delay: 7s;
     transform-origin: top left;
     animation-fill-mode: both, forwards, both;
+    animation-iteration-count: 100;
 }
 
 @keyframes birdWingMovement {
@@ -542,5 +546,102 @@
 
     100% {
         transform: rotate(0deg) translateX(0.5px) translateY(0.5px);
+    }
+}
+
+#birdTail {
+    transform-box: fill-box;
+    animation-name: birdTailMovement;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-delay: 7s;
+    transform-origin: bottom left;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 100;
+}
+
+@keyframes birdTailMovement{
+    0%{transition: rotate(3deg);scale: 1.2;}
+    25%{transform: rotate(-3deg);scale: 1.3}
+    50%{transform: rotate(3deg);scale: 1.3}
+    75%{transform: rotate(-3deg);scale: 1.2}
+    100%{transform: rotate(3deg);scale: 1.1}
+}
+
+
+#rock {
+    animation-name: rockAnimation;
+    z-index: 444;
+    opacity: 0.7;
+}
+
+@keyframes rockAnimation {
+    0% {}
+
+    10% {
+        opacity: 0.7;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    40% {
+        transform: translateY(-1px);
+        opacity: 0.7;
+    }
+
+    60% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-1px);
+        opacity: 1;
+    }
+}
+
+/*Bottom Animation*/
+#grass2Move>path {
+    transform-box: fill-box;
+    animation-name: grass;
+    animation-timing-function: ease;
+    animation-duration: 7s;
+    transform-origin: bottom center;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes grass {
+    0% {
+        transform: rotate(3deg);
+    }
+
+    15% {
+        transform: rotate(-3deg);
+    }
+
+    25% {
+        transform: rotate(3deg);
+    }
+
+    55% {
+        transform: rotate(-3deg);
+    }
+
+    70% {
+        transform: rotate(3deg);
+    }
+
+    85% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(3deg);
     }
 }
