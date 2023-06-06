@@ -91,9 +91,17 @@ input{
     border-radius: 2ch;
     outline: none;
     color: rgb(124, 118, 118);
+    font-size: 2vh;
+    background-color:rgb(230, 192, 136) ;
+    
 }
+input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
 input:invalid{
-    border-color: rgb(219, 92, 19);
+    border-color: rgb(214, 114, 56);
 }
 .topPart > input:valid{
     border-color:  rgb(19, 219, 19);
@@ -107,11 +115,14 @@ input:focus{
 input::placeholder{
     color: rgb(124, 118, 118);
     background-color: rgb(230, 192, 136);
-    padding: 0.7vh 0;
+    background-clip: padding-box;
+    padding: 0.2vh;
+    font-size: 2vh;
 }
 input:placeholder-shown{
     background-color:rgb(219, 166, 19);
-        font-size: 2vh;
+    padding: 0.2vh 0;
+    font-size: 2vh;
 }
 input[type=submit]{
     font-size: 3vh;
@@ -120,4 +131,11 @@ input[type=submit]{
     width: 21ch;
     margin-bottom: 2ch;
     background-color: rgb(230, 192, 136);
+    color:rgb(255,255,255);
+    font-weight: 800;
+}
+input[type=submit]:focus{
+    border-color: rgb(219, 166, 19);
+    outline: thick double rgb(255, 255, 255);
+    color:rgb(219, 139, 19);
 }
