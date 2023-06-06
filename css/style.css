@@ -87,7 +87,7 @@ h1 > span{
 }
 /*inputs styling*/
 input{
-    border: 0.45ch solid  rgb(206, 219, 19);
+    border: 0.45ch solid rgb(219, 166, 19);
     border-radius: 2ch;
     outline: none;
     color: rgb(124, 118, 118);
@@ -95,7 +95,7 @@ input{
 input:invalid{
     border-color: rgb(219, 92, 19);
 }
-input:valid{
+.topPart > input:valid{
     border-color:  rgb(19, 219, 19);
     outline: 0.3ch solid rgb(219, 166, 19);
 }
@@ -119,4 +119,5 @@ input[type=submit]{
     padding: 1ch 2ch;
     width: 21ch;
     margin-bottom: 2ch;
+    background-color: rgb(230, 192, 136);
 }
