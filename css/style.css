@@ -78,7 +78,7 @@ form{
     width: 64px;
 }
 h1{
-    font-size: 2vw;
+    font-size: 2vh;
     line-height: 7vh;
 }
 h1 > span{
@@ -106,7 +106,8 @@ input:focus{
 }
 input::placeholder{
     color: rgb(124, 118, 118);
-    background-color: rgb(219, 139, 19);
+    background-color: rgb(230, 192, 136);
+    padding: 0.7vh 0;
 }
 input:placeholder-shown{
     background-color:rgb(219, 166, 19);
