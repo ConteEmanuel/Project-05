@@ -110,6 +110,7 @@ input::placeholder{
 }
 input:placeholder-shown{
     background-color:rgb(219, 166, 19);
+        font-size: 2vh;
 }
 input[type=submit]{
     font-size: 2vh;
