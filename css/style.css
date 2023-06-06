@@ -116,8 +116,9 @@ input::placeholder{
     color: rgb(124, 118, 118);
     background-color: rgb(230, 192, 136);
     background-clip: padding-box;
-    padding: 0.2vh;
+    padding: 0.5vh 0;
     font-size: 2vh;
+    text-align: center;
 }
 input:placeholder-shown{
     background-color:rgb(219, 166, 19);
